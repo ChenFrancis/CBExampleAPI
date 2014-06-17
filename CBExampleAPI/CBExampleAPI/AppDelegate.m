@@ -16,10 +16,21 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    // ViewController
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     self.vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"ViewController"];
+    self.vc.title = NSStringFromClass([ViewController class]);
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:self.vc];
     
-    self.window.rootViewController = self.vc;
+    // FirstViewController
+    FirstViewController *firstVC = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
+    firstVC.title = NSStringFromClass([FirstViewController class]);
+    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:firstVC];
+    
+    UITabBarController *tabController = [[UITabBarController alloc] init];
+    tabController.viewControllers = @[nav2, nav1];
+    
+    self.window.rootViewController = tabController;
     
     return YES;
 }

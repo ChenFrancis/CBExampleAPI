@@ -20,6 +20,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     NSLog(@"加载了%@", NSStringFromClass([ViewController class]));
+    
+    NSLog(@"执行[%@ %@]", NSStringFromClass([ViewController class]), NSStringFromSelector(_cmd));
 }
 
 - (void)didReceiveMemoryWarning
