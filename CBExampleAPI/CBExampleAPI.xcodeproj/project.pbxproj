@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50C7A3919512F4700107C71 /* ArrayAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = C50C7A3819512F4700107C71 /* ArrayAPI.plist */; };
+		C50C7A3E19517B5600107C71 /* AttributedStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50C7A3C19517B5600107C71 /* AttributedStringViewController.m */; };
+		C50C7A3F19517B5600107C71 /* AttributedStringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C50C7A3D19517B5600107C71 /* AttributedStringViewController.xib */; };
 		C575968F1950290600720542 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C575968E1950290600720542 /* Foundation.framework */; };
 		C57596911950290600720542 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57596901950290600720542 /* CoreGraphics.framework */; };
 		C57596931950290600720542 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57596921950290600720542 /* UIKit.framework */; };
@@ -39,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C50C7A3819512F4700107C71 /* ArrayAPI.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ArrayAPI.plist; sourceTree = "<group>"; };
+		C50C7A3B19517B5600107C71 /* AttributedStringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributedStringViewController.h; sourceTree = "<group>"; };
+		C50C7A3C19517B5600107C71 /* AttributedStringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributedStringViewController.m; sourceTree = "<group>"; };
+		C50C7A3D19517B5600107C71 /* AttributedStringViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttributedStringViewController.xib; sourceTree = "<group>"; };
 		C575968B1950290600720542 /* CBExampleAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBExampleAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C575968E1950290600720542 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C57596901950290600720542 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -92,6 +99,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C50C7A3A1951754600107C71 /* RichText */ = {
+			isa = PBXGroup;
+			children = (
+				C50C7A3B19517B5600107C71 /* AttributedStringViewController.h */,
+				C50C7A3C19517B5600107C71 /* AttributedStringViewController.m */,
+				C50C7A3D19517B5600107C71 /* AttributedStringViewController.xib */,
+			);
+			path = RichText;
+			sourceTree = "<group>";
+		};
 		C57596821950290500720542 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +142,7 @@
 		C57596941950290600720542 /* CBExampleAPI */ = {
 			isa = PBXGroup;
 			children = (
+				C50C7A3A1951754600107C71 /* RichText */,
 				C57596CD1950494B00720542 /* CommonDataType */,
 				C57596CA195043FD00720542 /* Resource */,
 				C57596C8195038E100720542 /* Macro */,
@@ -183,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				C57596CB1950443200720542 /* FoundationFramework.plist */,
+				C50C7A3819512F4700107C71 /* ArrayAPI.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -275,8 +294,10 @@
 			files = (
 				C57596D21950499400720542 /* ArrayViewController.xib in Resources */,
 				C57596A71950290600720542 /* Images.xcassets in Resources */,
+				C50C7A3919512F4700107C71 /* ArrayAPI.plist in Resources */,
 				C57596991950290600720542 /* InfoPlist.strings in Resources */,
 				C57596A21950290600720542 /* Main.storyboard in Resources */,
+				C50C7A3F19517B5600107C71 /* AttributedStringViewController.xib in Resources */,
 				C57596C71950355D00720542 /* FirstViewController.xib in Resources */,
 				C57596CC1950443200720542 /* FoundationFramework.plist in Resources */,
 			);
@@ -299,6 +320,7 @@
 			files = (
 				C57596A51950290600720542 /* ViewController.m in Sources */,
 				C57596D11950499400720542 /* ArrayViewController.m in Sources */,
+				C50C7A3E19517B5600107C71 /* AttributedStringViewController.m in Sources */,
 				C575969F1950290600720542 /* AppDelegate.m in Sources */,
 				C575969B1950290600720542 /* main.m in Sources */,
 				C57596C61950355D00720542 /* FirstViewController.m in Sources */,

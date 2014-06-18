@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 
 #import "ArrayViewController.h"
+#import "AttributedStringViewController.h"
 
 @interface FirstViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -128,10 +129,21 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    ArrayViewController *arrayVC = [[ArrayViewController alloc] initWithNibName:@"ArrayViewController" bundle:nil];
-    arrayVC.title = @"ArrayViewController";
-    arrayVC.navigationController.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:arrayVC animated:YES];
+    NSInteger row = indexPath.row+1;
+    
+    if (2 == row)
+    {
+        ArrayViewController *arrayVC = [[ArrayViewController alloc] initWithNibName:@"ArrayViewController" bundle:nil];
+        arrayVC.title = @"ArrayViewController";
+        [self.navigationController pushViewController:arrayVC animated:YES];
+    }
+    else if (3 == row)
+    {
+        AttributedStringViewController *attributedStringVC = [[AttributedStringViewController alloc] initWithNibName:@"AttributedStringViewController" bundle:nil];
+        attributedStringVC.title = @"AttributedStringViewController";
+        [self.navigationController pushViewController:attributedStringVC animated:YES];
+    }
+    
 }
 
 @end
