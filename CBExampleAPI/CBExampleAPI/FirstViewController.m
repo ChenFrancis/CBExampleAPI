@@ -10,6 +10,7 @@
 
 #import "ArrayViewController.h"
 #import "AttributedStringViewController.h"
+#import "BundleViewController.h"
 
 @interface FirstViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -131,7 +132,11 @@
     
     NSInteger row = indexPath.row+1;
     
-    if (2 == row)
+    if (1 == row)
+    {
+        [self showAlertTitle:nil message:@"暂时忽略该项"];
+    }
+    else if (2 == row)
     {
         ArrayViewController *arrayVC = [[ArrayViewController alloc] initWithNibName:@"ArrayViewController" bundle:nil];
         arrayVC.title = @"ArrayViewController";
@@ -143,7 +148,23 @@
         attributedStringVC.title = @"AttributedStringViewController";
         [self.navigationController pushViewController:attributedStringVC animated:YES];
     }
-    
+    else if (4 == row)
+    {
+        [self showAlertTitle:nil message:@"该类不可用"];
+    }
+    else if (5 == row)
+    {
+        BundleViewController *bundleVC = [[BundleViewController alloc] initWithNibName:@"BundleViewController" bundle:nil];
+        bundleVC.title = @"BundleViewController";
+        [self.navigationController pushViewController:bundleVC animated:YES];
+    }
+}
+
+#pragma mark - Alert
+- (void)showAlertTitle:(NSString *)title message:(NSString *)msg
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 @end
