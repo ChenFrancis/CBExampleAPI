@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
 }
 
 - (void)didReceiveMemoryWarning
