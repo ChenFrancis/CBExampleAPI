@@ -21,16 +21,20 @@
     self.vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"ViewController"];
     self.vc.title = NSStringFromClass([ViewController class]);
     UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:self.vc];
+    nav1.navigationBar.hidden = YES;
     
     // FirstViewController
     FirstViewController *firstVC = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
     firstVC.title = NSStringFromClass([FirstViewController class]);
     UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:firstVC];
+    nav2.navigationBar.hidden = YES;
     
     UITabBarController *tabController = [[UITabBarController alloc] init];
     tabController.viewControllers = @[nav2, nav1];
     
-    self.window.rootViewController = tabController;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tabController];
+    
+    self.window.rootViewController = nav;
     
     return YES;
 }

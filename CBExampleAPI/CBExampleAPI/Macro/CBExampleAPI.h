@@ -9,6 +9,11 @@
 #ifndef CBExampleAPI_CBExampleAPI_h
 #define CBExampleAPI_CBExampleAPI_h
 
+#pragma mark - 手机屏幕尺寸（坐标点）
+#define KScreenSize [UIScreen mainScreen].bounds.size
+#define KScreenWidth [UIScreen mainScreen].bounds.size.width
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
+
 #pragma mark - 应用程序尺寸
 
 #define KAppSize [UIScreen mainScreen].applicationFrame.size

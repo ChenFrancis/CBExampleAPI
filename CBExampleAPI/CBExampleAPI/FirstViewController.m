@@ -54,13 +54,18 @@
         CGFloat height = 0;
         if (KIsIOS7)
         {
-            navHeight = 0;
+//            navHeight = 0;
+            originY = navHeight;
             tabHeight = 0;
-            height = 20;
+            height = KAppHeight-navHeight-tabHeight+20;
+        }
+        else
+        {
+            height = KAppHeight-originY-navHeight-tabHeight;
         }
         
         _tbFoundationList = [[UITableView alloc] init];
-        _tbFoundationList.frame = CGRectMake(0, originY, KAppWidth, KAppHeight-originY-navHeight-tabHeight+height);
+        _tbFoundationList.frame = CGRectMake(0, originY, KAppWidth, height);
         [self.view addSubview:_tbFoundationList];
         
         _tbFoundationList.dataSource = self;
@@ -132,31 +137,36 @@
     
     NSInteger row = indexPath.row+1;
     
-    if (1 == row)
+    UIViewController *vc;
+    
+    if (1 == row || 6 == row || 8 == row)
     {
         [self showAlertTitle:nil message:@"暂时忽略该项"];
     }
     else if (2 == row)
     {
-        ArrayViewController *arrayVC = [[ArrayViewController alloc] initWithNibName:@"ArrayViewController" bundle:nil];
-        arrayVC.title = @"ArrayViewController";
-        [self.navigationController pushViewController:arrayVC animated:YES];
+        vc = [self initViewControllerWithName:@"ArrayViewController" title:@"ArrayViewController"];
     }
     else if (3 == row)
     {
-        AttributedStringViewController *attributedStringVC = [[AttributedStringViewController alloc] initWithNibName:@"AttributedStringViewController" bundle:nil];
-        attributedStringVC.title = @"AttributedStringViewController";
-        [self.navigationController pushViewController:attributedStringVC animated:YES];
+        vc = [self initViewControllerWithName:@"AttributedStringViewController" title:@"AttributedStringViewController"];
     }
-    else if (4 == row)
+    else if (4 == row || 7 == row)
     {
         [self showAlertTitle:nil message:@"该类不可用"];
     }
     else if (5 == row)
     {
-        BundleViewController *bundleVC = [[BundleViewController alloc] initWithNibName:@"BundleViewController" bundle:nil];
-        bundleVC.title = @"BundleViewController";
-        [self.navigationController pushViewController:bundleVC animated:YES];
+        vc = [self initViewControllerWithName:@"BundleViewController" title:@"BundleViewController"];
+    }
+    else if (9 == row)
+    {
+        vc = [self initViewControllerWithName:@"CalendarDemoViewController" title:@"CalendarDemoViewController"];
+    }
+    
+    if (vc)
+    {
+        [self.tabBarController.navigationController pushViewController:vc animated:YES];
     }
 }
 
@@ -165,6 +175,14 @@
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     [alert show];
+}
+
+#pragma mark - Init ViewController
+- (UIViewController *)initViewControllerWithName:(NSString *)name title:(NSString *)title
+{
+    UIViewController *vc = [[NSClassFromString(name) alloc] initWithNibName:name bundle:nil];
+    vc.title = title;
+    return vc;
 }
 
 @end

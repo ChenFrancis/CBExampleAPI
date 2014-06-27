@@ -54,7 +54,7 @@
 		<key>ClassName</key>
 		<string>NSCalendar.h</string>
 		<key>IsLevel2</key>
-		<false/>
+		<true/>
 	</dict>
 	<dict>
 		<key>ClassName</key>
