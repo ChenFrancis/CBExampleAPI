@@ -163,6 +163,14 @@
     {
         vc = [self initViewControllerWithName:@"CalendarDemoViewController" title:@"CalendarDemoViewController"];
     }
+    else if (10 == row)
+    {
+        [self showAlertTitle:nil message:@"该类使用较少，目前只用于处理文本两端空格和回车，暂不做过多列举"];
+    }
+    else if (11 == row)
+    {
+        // NSCoder
+    }
     
     if (vc)
     {

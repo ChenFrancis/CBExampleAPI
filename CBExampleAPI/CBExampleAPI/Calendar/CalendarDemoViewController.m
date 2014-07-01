@@ -29,31 +29,84 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    NSCalendar *calendar3 = [[NSCalendar alloc] initWithCalendarIdentifier:NSBuddhistCalendar];// 佛教日历
+    NSString *identifier = [calendar3 calendarIdentifier];
+    NSLog(@"日历标识符：%@", identifier);
+    
     NSCalendar *calendar1 = [NSCalendar currentCalendar];
     [calendar1 setLocale:[NSLocale currentLocale]];
     NSLog(@"日历地区信息：%@", [calendar1 locale]);
     
+    
     [calendar1 setTimeZone:[NSTimeZone systemTimeZone]];
     NSLog(@"日历时区信息：%@", [calendar1 timeZone]);
     
+    
     [calendar1 setFirstWeekday:3];// 周日：1 …… 周六：7
-    NSLog(@"每周第一天是：%ul", [calendar1 firstWeekday]);
+    NSLog(@"每周第一天是：%lu", (unsigned long)[calendar1 firstWeekday]);
+    
     
     [self setCalendar:calendar1 minimumDaysInFirstWeek:5];
     
+    
     [self logCalendarLocaleSysmbols:calendar1];// 改方法不可用，ios系统禁用了
+    
     
     NSRange minRange = [calendar1 minimumRangeOfUnit:NSDayCalendarUnit];
     NSRange maxRange = [calendar1 maximumRangeOfUnit:NSDayCalendarUnit];
     NSLog(@"\nminRange:%@\nmaxRange%@", NSStringFromRange(minRange), NSStringFromRange(maxRange));
     
-//    NSCalendar *calendar2 = [NSCalendar autoupdatingCurrentCalendar];
     
-    NSCalendar *calendar3 = [[NSCalendar alloc] initWithCalendarIdentifier:NSBuddhistCalendar];// 佛教日历
-    NSString *identifier = [calendar3 calendarIdentifier];
-    NSLog(@"日历标识符：%@", identifier);
+    NSRange range1 = [calendar1 rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:[NSDate date]];
+    NSLog(@"\n今天所在月份包含的日期范围是：%@", NSStringFromRange(range1));
     
     
+    NSUInteger num1 = [calendar1 ordinalityOfUnit:NSCalendarUnitWeekdayOrdinal inUnit:NSCalendarUnitMonth forDate:[NSDate date]];
+    NSLog(@"\n今天是这个月的第%lu周", (unsigned long)num1);
+    
+    
+    NSDate *sDate;
+    NSTimeInterval timeSpace;
+    BOOL canCalculate = [calendar1 rangeOfUnit:NSCalendarUnitMonth startDate:&sDate interval:&timeSpace forDate:[NSDate date]];
+    NSString *hint = canCalculate? @"计算成功" : @"计算失败";
+    NSLog(@"\n%@!今天所在月的第一天是%@，这个月有%.0f秒，即%.0f天", hint, sDate, timeSpace, (timeSpace/3600/24));
+    
+    
+    NSDateComponents *comp = [[NSDateComponents alloc] init];
+    [comp setYear:2008];
+    [comp setMonth:8];
+    [comp setDay:8];
+    [comp setHour:16];
+    [comp setMinute:8];
+    [comp setSecond:8];
+    NSDate *dateFromComp = [calendar1 dateFromComponents:comp];
+    NSLog(@"\n通过NSDateComponents获得NSDate:%@", dateFromComp);
+    
+    unsigned int unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;// 该设置意味着日期组件能够显示那些信息。现在设置了年月日，那么这个日期组件就能够获取到年月日的信息。
+    comp = [calendar1 components:unitFlags fromDate:dateFromComp];
+    NSLog(@"\n通过NSDate获得NSDateComponents:%@", [comp description]);
+    
+    
+    comp = [[NSDateComponents alloc] init];
+    NSInteger addDay = 10;
+    [comp setDay:addDay];
+    NSDate *today = [NSDate date];
+    NSDate *dateAdd = [calendar1 dateByAddingComponents:comp toDate:today options:NSCalendarWrapComponents];
+    NSLog(@"\n现在是：%@\n%d天后是：%@", today, addDay, dateAdd);
+    
+    
+    unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;// 该设置意味着日期组件能够显示那些信息。现在设置了年月日，那么这个日期组件就能够获取到年月日的信息。
+    NSDate *toDate = [today dateByAddingTimeInterval:-(3600*24*480)];
+    comp = [calendar1 components:unitFlags fromDate:today toDate:toDate options:NSCalendarWrapComponents];
+    NSInteger yearSpace = [comp year];
+    NSInteger monthSpace = [comp month];
+    NSInteger daySpace = [comp day];
+    NSLog(@"\n从%@到%@，相差%d年%d个月%d天", today, toDate, yearSpace, monthSpace, daySpace);
+    
+    
+    //其他的API是10.9/IOS7可用，所以暂时不列举出来
+    NSString *aStr = @"- (void)getEra:(out NSInteger *)eraValuePointer year:(out NSInteger *)yearValuePointer month:(out NSInteger *)monthValuePointer day:(out NSInteger *)dayValuePointer fromDate:(NSDate *)date";
+    NSLog(@"\n\n\n其他的API是10.9/IOS7可用，所以暂时不列举出来。\n如%@", aStr);
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,7 +124,7 @@
 - (void)setCalendar:(NSCalendar *)calendar minimumDaysInFirstWeek:(NSUInteger)minimum
 {
     [calendar setMinimumDaysInFirstWeek:minimum];// 设置每年及每月第一周必须包含的最少天数，比如：设定第一周最少包括3天，则value传入3
-    NSLog(@"每年及每月第一周必须包含的最少天数是：%d", [calendar minimumDaysInFirstWeek]);
+    NSLog(@"每年及每月第一周必须包含的最少天数是：%lu", (unsigned long)[calendar minimumDaysInFirstWeek]);
     
     /*
      当方法[NSCalendar ordinalityOfUnit: inUnit: fromDate:]
