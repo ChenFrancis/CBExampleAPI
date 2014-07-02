@@ -36,6 +36,8 @@
 		C5BDCDD31963F6CE00CB1034 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BDCDD11963F6CE00CB1034 /* DataViewController.m */; };
 		C5BDCDD41963F6CE00CB1034 /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5BDCDD21963F6CE00CB1034 /* DataViewController.xib */; };
 		C5BDCDD71963F78600CB1034 /* ScheduleTypeCustom.png in Resources */ = {isa = PBXBuildFile; fileRef = C5BDCDD61963F78600CB1034 /* ScheduleTypeCustom.png */; };
+		C5BDCDDB1963FF9600CB1034 /* DateFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BDCDD91963FF9600CB1034 /* DateFormatterViewController.m */; };
+		C5BDCDDC1963FF9600CB1034 /* DateFormatterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5BDCDDA1963FF9600CB1034 /* DateFormatterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,9 @@
 		C5BDCDD11963F6CE00CB1034 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		C5BDCDD21963F6CE00CB1034 /* DataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataViewController.xib; sourceTree = "<group>"; };
 		C5BDCDD61963F78600CB1034 /* ScheduleTypeCustom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScheduleTypeCustom.png; sourceTree = "<group>"; };
+		C5BDCDD81963FF9600CB1034 /* DateFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormatterViewController.h; sourceTree = "<group>"; };
+		C5BDCDD91963FF9600CB1034 /* DateFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatterViewController.m; sourceTree = "<group>"; };
+		C5BDCDDA1963FF9600CB1034 /* DateFormatterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateFormatterViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +150,9 @@
 				C5BDCDD01963F6CE00CB1034 /* DataViewController.h */,
 				C5BDCDD11963F6CE00CB1034 /* DataViewController.m */,
 				C5BDCDD21963F6CE00CB1034 /* DataViewController.xib */,
+				C5BDCDD81963FF9600CB1034 /* DateFormatterViewController.h */,
+				C5BDCDD91963FF9600CB1034 /* DateFormatterViewController.m */,
+				C5BDCDDA1963FF9600CB1034 /* DateFormatterViewController.xib */,
 			);
 			path = OtherFoundationClass;
 			sourceTree = "<group>";
@@ -355,6 +363,7 @@
 				C57596C71950355D00720542 /* FirstViewController.xib in Resources */,
 				C5BDCDD41963F6CE00CB1034 /* DataViewController.xib in Resources */,
 				C57596CC1950443200720542 /* FoundationFramework.plist in Resources */,
+				C5BDCDDC1963FF9600CB1034 /* DateFormatterViewController.xib in Resources */,
 				C5BDCDD71963F78600CB1034 /* ScheduleTypeCustom.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +388,7 @@
 				C50C7A3E19517B5600107C71 /* AttributedStringViewController.m in Sources */,
 				C50C7A441951959000107C71 /* BundleViewController.m in Sources */,
 				C5BDCDD31963F6CE00CB1034 /* DataViewController.m in Sources */,
+				C5BDCDDB1963FF9600CB1034 /* DateFormatterViewController.m in Sources */,
 				C575969F1950290600720542 /* AppDelegate.m in Sources */,
 				C5073C81195D646E00E75F4D /* CalendarDemoViewController.m in Sources */,
 				C575969B1950290600720542 /* main.m in Sources */,

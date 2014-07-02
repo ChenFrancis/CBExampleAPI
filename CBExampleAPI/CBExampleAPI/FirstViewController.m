@@ -175,6 +175,14 @@
     {
         vc = [self initViewControllerWithName:@"DataViewController" title:@"DataViewController"];
     }
+    else if (15 == row)
+    {
+        [self showAlertTitle:nil message:@"内容较简单，不做列举"];
+    }
+    else if (16 == row)
+    {
+        vc = [self initViewControllerWithName:@"DateFormatterViewController" title:@"DateFormatterViewController"];
+    }
     
     if (vc)
     {
