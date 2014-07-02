@@ -139,7 +139,7 @@
     
     UIViewController *vc;
     
-    if (1 == row || 6 == row || 8 == row)
+    if (1 == row || 6 == row || 8 == row || 11 == row)
     {
         [self showAlertTitle:nil message:@"暂时忽略该项"];
     }
@@ -167,9 +167,13 @@
     {
         [self showAlertTitle:nil message:@"该类使用较少，目前只用于处理文本两端空格和回车，暂不做过多列举"];
     }
-    else if (11 == row)
+    else if (12 == row || 13 == row)
     {
-        // NSCoder
+        [self showAlertTitle:nil message:@"目前只有 mac os 的demo，没有找到iOS的demo。在 NSPredicate 中进行学习！"];
+    }
+    else if (14 == row)
+    {
+        vc = [self initViewControllerWithName:@"DataViewController" title:@"DataViewController"];
     }
     
     if (vc)

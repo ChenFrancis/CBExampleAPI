@@ -33,6 +33,9 @@
 		C57596CC1950443200720542 /* FoundationFramework.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57596CB1950443200720542 /* FoundationFramework.plist */; };
 		C57596D11950499400720542 /* ArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57596CF1950499400720542 /* ArrayViewController.m */; };
 		C57596D21950499400720542 /* ArrayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C57596D01950499400720542 /* ArrayViewController.xib */; };
+		C5BDCDD31963F6CE00CB1034 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BDCDD11963F6CE00CB1034 /* DataViewController.m */; };
+		C5BDCDD41963F6CE00CB1034 /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5BDCDD21963F6CE00CB1034 /* DataViewController.xib */; };
+		C5BDCDD71963F78600CB1034 /* ScheduleTypeCustom.png in Resources */ = {isa = PBXBuildFile; fileRef = C5BDCDD61963F78600CB1034 /* ScheduleTypeCustom.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,10 @@
 		C57596CE1950499400720542 /* ArrayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayViewController.h; sourceTree = "<group>"; };
 		C57596CF1950499400720542 /* ArrayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayViewController.m; sourceTree = "<group>"; };
 		C57596D01950499400720542 /* ArrayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArrayViewController.xib; sourceTree = "<group>"; };
+		C5BDCDD01963F6CE00CB1034 /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		C5BDCDD11963F6CE00CB1034 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		C5BDCDD21963F6CE00CB1034 /* DataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataViewController.xib; sourceTree = "<group>"; };
+		C5BDCDD61963F78600CB1034 /* ScheduleTypeCustom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScheduleTypeCustom.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +142,9 @@
 				C50C7A411951959000107C71 /* BundleViewController.h */,
 				C50C7A421951959000107C71 /* BundleViewController.m */,
 				C50C7A431951959000107C71 /* BundleViewController.xib */,
+				C5BDCDD01963F6CE00CB1034 /* DataViewController.h */,
+				C5BDCDD11963F6CE00CB1034 /* DataViewController.m */,
+				C5BDCDD21963F6CE00CB1034 /* DataViewController.xib */,
 			);
 			path = OtherFoundationClass;
 			sourceTree = "<group>";
@@ -232,6 +242,7 @@
 		C57596CA195043FD00720542 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				C5BDCDD51963F78600CB1034 /* Image */,
 				C57596CB1950443200720542 /* FoundationFramework.plist */,
 				C50C7A3819512F4700107C71 /* ArrayAPI.plist */,
 			);
@@ -247,6 +258,14 @@
 			);
 			name = BaseDataType;
 			path = CommonDataType;
+			sourceTree = "<group>";
+		};
+		C5BDCDD51963F78600CB1034 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C5BDCDD61963F78600CB1034 /* ScheduleTypeCustom.png */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,7 +353,9 @@
 				C57596A21950290600720542 /* Main.storyboard in Resources */,
 				C50C7A3F19517B5600107C71 /* AttributedStringViewController.xib in Resources */,
 				C57596C71950355D00720542 /* FirstViewController.xib in Resources */,
+				C5BDCDD41963F6CE00CB1034 /* DataViewController.xib in Resources */,
 				C57596CC1950443200720542 /* FoundationFramework.plist in Resources */,
+				C5BDCDD71963F78600CB1034 /* ScheduleTypeCustom.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +378,7 @@
 				C57596D11950499400720542 /* ArrayViewController.m in Sources */,
 				C50C7A3E19517B5600107C71 /* AttributedStringViewController.m in Sources */,
 				C50C7A441951959000107C71 /* BundleViewController.m in Sources */,
+				C5BDCDD31963F6CE00CB1034 /* DataViewController.m in Sources */,
 				C575969F1950290600720542 /* AppDelegate.m in Sources */,
 				C5073C81195D646E00E75F4D /* CalendarDemoViewController.m in Sources */,
 				C575969B1950290600720542 /* main.m in Sources */,
