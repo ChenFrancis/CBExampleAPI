@@ -18,6 +18,8 @@
 		C532A72E1977729400344630 /* UIKitFramework.plist in Resources */ = {isa = PBXBuildFile; fileRef = C532A72D1977729400344630 /* UIKitFramework.plist */; };
 		C532A7331977B1E800344630 /* ActivityIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C532A7311977B1E800344630 /* ActivityIndicatorViewController.m */; };
 		C532A7341977B1E800344630 /* ActivityIndicatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C532A7321977B1E800344630 /* ActivityIndicatorViewController.xib */; };
+		C5467A66197E0EE900B57807 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5467A64197E0EE900B57807 /* AnimationViewController.m */; };
+		C5467A67197E0EE900B57807 /* AnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5467A65197E0EE900B57807 /* AnimationViewController.xib */; };
 		C575968F1950290600720542 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C575968E1950290600720542 /* Foundation.framework */; };
 		C57596911950290600720542 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57596901950290600720542 /* CoreGraphics.framework */; };
 		C57596931950290600720542 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57596921950290600720542 /* UIKit.framework */; };
@@ -71,6 +73,9 @@
 		C532A7301977B1E800344630 /* ActivityIndicatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicatorViewController.h; sourceTree = "<group>"; };
 		C532A7311977B1E800344630 /* ActivityIndicatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicatorViewController.m; sourceTree = "<group>"; };
 		C532A7321977B1E800344630 /* ActivityIndicatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityIndicatorViewController.xib; sourceTree = "<group>"; };
+		C5467A63197E0EE900B57807 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
+		C5467A64197E0EE900B57807 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		C5467A65197E0EE900B57807 /* AnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimationViewController.xib; sourceTree = "<group>"; };
 		C575968B1950290600720542 /* CBExampleAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBExampleAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C575968E1950290600720542 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C57596901950290600720542 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -186,6 +191,16 @@
 			path = ActivityIndicator;
 			sourceTree = "<group>";
 		};
+		C5467A62197E0EB900B57807 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				C5467A63197E0EE900B57807 /* AnimationViewController.h */,
+				C5467A64197E0EE900B57807 /* AnimationViewController.m */,
+				C5467A65197E0EE900B57807 /* AnimationViewController.xib */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		C57596821950290500720542 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +234,7 @@
 		C57596941950290600720542 /* CBExampleAPI */ = {
 			isa = PBXGroup;
 			children = (
+				C5467A62197E0EB900B57807 /* Animation */,
 				C532A72F19779FBC00344630 /* ActivityIndicator */,
 				C532A729197770C300344630 /* Common */,
 				C5073C7D195D644900E75F4D /* Calendar */,
@@ -395,6 +411,7 @@
 				C532A72E1977729400344630 /* UIKitFramework.plist in Resources */,
 				C57596C71950355D00720542 /* FirstViewController.xib in Resources */,
 				C532A7341977B1E800344630 /* ActivityIndicatorViewController.xib in Resources */,
+				C5467A67197E0EE900B57807 /* AnimationViewController.xib in Resources */,
 				C5BDCDD41963F6CE00CB1034 /* DataViewController.xib in Resources */,
 				C57596CC1950443200720542 /* FoundationFramework.plist in Resources */,
 				C5BDCDDC1963FF9600CB1034 /* DateFormatterViewController.xib in Resources */,
@@ -418,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C532A72C1977710900344630 /* SuperCommon.m in Sources */,
+				C5467A66197E0EE900B57807 /* AnimationViewController.m in Sources */,
 				C57596A51950290600720542 /* ViewController.m in Sources */,
 				C57596D11950499400720542 /* ArrayViewController.m in Sources */,
 				C532A7331977B1E800344630 /* ActivityIndicatorViewController.m in Sources */,

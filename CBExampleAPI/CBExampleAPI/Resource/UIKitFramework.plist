@@ -8,5 +8,11 @@
 		<key>IsLevel2</key>
 		<true/>
 	</dict>
+    <dict>
+		<key>ClassName</key>
+		<string>UIViewAnimation</string>
+		<key>IsLevel2</key>
+		<true/>
+	</dict>
 </array>
 </plist>

@@ -107,6 +107,10 @@
     {
         vc = [self initViewControllerWithName:@"ActivityIndicatorViewController" title:@"指示器"];
     }
+    else if (2 == row)
+    {
+        vc = [self initViewControllerWithName:@"AnimationViewController" title:@"视图动画"];
+    }
     
     if (vc)
     {
