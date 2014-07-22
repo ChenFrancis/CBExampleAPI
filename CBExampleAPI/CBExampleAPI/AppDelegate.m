@@ -30,7 +30,7 @@
     nav2.navigationBar.hidden = YES;
     
     UITabBarController *tabController = [[UITabBarController alloc] init];
-    tabController.viewControllers = @[nav2, nav1];
+    tabController.viewControllers = @[nav1, nav2];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tabController];
     

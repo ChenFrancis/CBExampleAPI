@@ -24,4 +24,7 @@
 
 #define KIsIOS7 [[[UIDevice currentDevice] systemVersion]floatValue]>=7.0
 
+#pragma mark - 加入头文件
+#import "SuperCommon.h"
+
 #endif

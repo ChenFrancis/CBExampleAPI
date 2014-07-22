@@ -141,7 +141,7 @@
     
     if (1 == row || 6 == row || 8 == row || 11 == row)
     {
-        [self showAlertTitle:nil message:@"暂时忽略该项"];
+        [SuperCommon showAlertTitle:nil message:@"暂时忽略该项"];
     }
     else if (2 == row)
     {
@@ -153,7 +153,7 @@
     }
     else if (4 == row || 7 == row)
     {
-        [self showAlertTitle:nil message:@"该类不可用"];
+        [SuperCommon showAlertTitle:nil message:@"该类不可用"];
     }
     else if (5 == row)
     {
@@ -165,11 +165,11 @@
     }
     else if (10 == row)
     {
-        [self showAlertTitle:nil message:@"该类使用较少，目前只用于处理文本两端空格和回车，暂不做过多列举"];
+        [SuperCommon showAlertTitle:nil message:@"该类使用较少，目前只用于处理文本两端空格和回车，暂不做过多列举"];
     }
     else if (12 == row || 13 == row)
     {
-        [self showAlertTitle:nil message:@"目前只有 mac os 的demo，没有找到iOS的demo。在 NSPredicate 中进行学习！"];
+        [SuperCommon showAlertTitle:nil message:@"目前只有 mac os 的demo，没有找到iOS的demo。在 NSPredicate 中进行学习！"];
     }
     else if (14 == row)
     {
@@ -177,24 +177,21 @@
     }
     else if (15 == row)
     {
-        [self showAlertTitle:nil message:@"内容较简单，不做列举"];
+        [SuperCommon showAlertTitle:nil message:@"内容较简单，不做列举"];
     }
     else if (16 == row)
     {
         vc = [self initViewControllerWithName:@"DateFormatterViewController" title:@"DateFormatterViewController"];
+    }
+    else if (17 == row)
+    {
+//        NSDecimal
     }
     
     if (vc)
     {
         [self.tabBarController.navigationController pushViewController:vc animated:YES];
     }
-}
-
-#pragma mark - Alert
-- (void)showAlertTitle:(NSString *)title message:(NSString *)msg
-{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-    [alert show];
 }
 
 #pragma mark - Init ViewController
